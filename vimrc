@@ -1,15 +1,14 @@
 " Map leader to <SPACE>
 let mapleader = " "
-
-
 " ----- Begin Vundle initialization
 set nocompatible               " be iMproved
+filetype on                    " for some reason, invoking vim as 'vi' on OS X returns non-zero unless this is here.
 filetype off                   " required!
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'altercation/vim-colors-solarized'
