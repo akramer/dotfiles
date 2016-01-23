@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'altercation/vim-colors-solarized'
