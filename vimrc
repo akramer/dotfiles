@@ -17,6 +17,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bufexplorer.zip'
 Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
+Plugin 'christoomey/vim-tmux-navigator'
 " ----- End Vundle initialization
 
 " Set up Solarized theme
@@ -72,8 +73,10 @@ let g:netrw_altv=1
 " map gp to toggle paste/nopaste
 map gp :set invpaste<CR>:set paste?<CR>
 
-" Act like my tmux and screen configs when moving between panes
-noremap <C-a>h <C-w>h
-noremap <C-a>j <C-w>j
-noremap <C-a>k <C-w>k
-noremap <C-a>l <C-w>l
+" Move through tmux and vim panes seamlessly
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-a>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
